@@ -1,0 +1,6 @@
+🟡 Posicione o sistema. Início em 5 segundos...
+📊 Planilha dados.xlsx carregada como "plan" com 3 linhas
+🔁 Iteração 1/3
+🔁 Iteração 2/3
+🔁 Iteração 3/3
+📸 Imagem salva em: imagens/Resolucao.png
