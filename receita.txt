@@ -1,0 +1,21 @@
+ler_planilha: dados.xlsx plan
+
+inicio_iteracao plan
+
+clicar_e_arrastar: barra.png, 0, 200, 1.5
+
+clicar_imagem: texto.png
+esperar: 1
+clicar_imagem: texto.png
+
+esperar: 1
+clicar_offset: quadrado.png, 50, 0, 0.9
+esperar: 1
+escrever: plan['email']
+clicar_offset: circulo.png, 150, 0
+esperar: 1
+
+
+
+fim_iteracao plan
+
