@@ -1,0 +1,60 @@
+# ==== EXEMPLO COMPLETO DE RECEITA PARA MOTOR RPA ====
+# Este arquivo deve estar na mesma pasta que o executável, junto com a pasta 'imagens/'
+
+# 📊 Carrega uma planilha Excel e armazena em uma variável
+ler_planilha: dados.xlsx plan
+
+# 🔁 Inicia um bloco de iteração sobre a planilha 'plan'
+inicio_iteracao plan
+
+# 🖱️ Clica em uma imagem
+clicar_imagem: botao_login.png
+clicar_imagem: botao_salvar.png, 0.9
+
+# 🖱️ Clica com offset a partir do centro da imagem
+clicar_offset: campo_email.png, 50, 0
+clicar_offset: engrenagem.png, 30, 20, 0.75
+
+# 🖱️ Clica em uma posição fixa da tela
+clicar_posicao: 600, 400
+
+# 📄 Escreve texto diretamente ou a partir da planilha
+escrever: plan['nome']
+escrever: exemplo@dominio.com
+
+# ⏳ Aguarda tempo fixo
+esperar: 2
+
+# 🖼️ Aguarda uma imagem aparecer (timeout padrão = 30s)
+aguardar_imagem: tela_dashboard.png
+aguardar_imagem: tela_final.png, 0.7
+
+# 🖼️ Espera por uma imagem por até 15s (usado fora do laço)
+esperar_imagem: tela_login.png
+
+# ⌨️ Pressiona uma tecla do teclado
+pressionar_tecla: enter
+pressionar_tecla: tab
+
+# ⌨️ Combina várias teclas
+combinar_teclas: ctrl, a
+combinar_teclas: ctrl, c
+
+# 📸 Captura imagem 200x200 com centro em (x,y)
+capturar_imagem: 800, 450, exemplo1.png
+capturar_imagem: 700, 300
+
+# 🖱️ Clica em imagem e arrasta até offset no tempo determinado
+clicar_e_arrastar: slider.png, 0, -100, 1.5
+clicar_e_arrastar: barra_scroll.png, 200, 0, 1.0, 0.9
+
+# 🖱️ Duplo clique em uma imagem
+duplo_clique_imagem: pasta_documentos.png
+duplo_clique_imagem: arquivo_pdf.png, 0.85
+
+# 🖱️ Rola a tela com scroll (positivo = cima, negativo = baixo)
+scroll: -300
+scroll: 500
+
+# 🔁 Finaliza o bloco de iteração da planilha
+fim_iteracao plan

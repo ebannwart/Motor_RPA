@@ -1,0 +1,6 @@
+ler_planilha: dados.xlsx plan
+inicio_iteracao plan
+
+fim_iteracao plan
+
+capturar_imagem: 1920, 1080, Resolucao.png
